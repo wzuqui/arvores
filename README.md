@@ -32,7 +32,7 @@ Os resultados devem ser no console
 //
 // Resultado pos ordem transversal deve ser:
 // Olá mundo!
-
+// Altura da árvore: 5
 ```
 
 [Editado no StackBlitz ⚡️](https://stackblitz.com/edit/arvores)

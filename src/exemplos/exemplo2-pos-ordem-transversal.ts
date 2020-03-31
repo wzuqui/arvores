@@ -14,6 +14,7 @@ import { ArvoreBinaria } from "../lib/ArvoreBinaria";
 
 // Resultado deve ser:
 // Olá mundo!
+// Altura da árvore: 5
 
 
 const root = new ArvoreBinaria("!");
@@ -28,3 +29,4 @@ root.direita.direita.direita = new ArvoreBinaria("n");
 root.direita.direita.direita.esquerda = new ArvoreBinaria("u");
 
 console.log(root.posOrdemTransversal());
+console.log('Altura da árvore:' , root.obterAltura());

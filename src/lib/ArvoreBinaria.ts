@@ -36,7 +36,7 @@ export class ArvoreBinaria {
       arvoreBinaria = this;
     }
 
-    if (arvoreBinaria.esquerda !== undefined) {
+    if (arvoreBinaria.esquerda) {
       retorno += this.posOrdemTransversal(arvoreBinaria.esquerda).toString();
     }
 
@@ -47,5 +47,26 @@ export class ArvoreBinaria {
     retorno += arvoreBinaria.toString();
 
     return retorno;
+  }
+
+  obterAltura(arvoreBinaria?: ArvoreBinaria): number {
+    if (arvoreBinaria === undefined) {
+      arvoreBinaria = this;
+    }
+    let alturaEsquerda = 0;
+    let alturaDireita = 0;
+
+    if (arvoreBinaria.esquerda) {
+      alturaEsquerda = this.obterAltura(arvoreBinaria.esquerda);
+    }
+
+    if (arvoreBinaria.direita) {
+      alturaDireita = this.obterAltura(arvoreBinaria.direita);
+    }
+
+    if (alturaDireita > alturaEsquerda) {
+      return alturaDireita + 1;
+    }
+    return alturaEsquerda + 1;
   }
 }
