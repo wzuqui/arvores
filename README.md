@@ -1,4 +1,4 @@
-# Exemplos de árvores binarias
+# Exemplos de árvores binárias
 
 Os resultados devem ser no console
 
